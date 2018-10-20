@@ -7,6 +7,7 @@ import { UserComponent } from './components/user/user.component';
 import {FormsModule} from '@angular/forms'
 import {environment} from '../environments/environment';
 import {FireserveService} from './services/fireserve.service';
+import { UserService } from './services/user.service';
 
 
 
@@ -21,7 +22,7 @@ import {FireserveService} from './services/fireserve.service';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [FireserveService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
