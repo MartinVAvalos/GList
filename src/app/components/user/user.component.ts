@@ -15,31 +15,14 @@ export class UserComponent implements OnInit {
 
 user:User;
 item:string='';
-serv: any[];
+//serv: any[];
 
  
   
   constructor( public u: UserService,private http: HttpClient,private fire:FireserveService ) { 
     this.user=u.user; // takes in the service and adds fields into it
     
-    this.serv = [
-      {
-        name: 'fag face',
-        capacity:'20 dicks',
-        id: 20
-      },
-      {
-        name:'jose',
-        capacity:'50 dicks',
-        id:4
-      },
-      {
-        name:'er',
-        capacity:'3 pussies',
-        id:6
-      }
-
-    ]
+  
 
   }
 
@@ -52,11 +35,18 @@ serv: any[];
   }
 
   onSave() {
-   this.fire.storeServers(this.serv)
+   this.fire.storeServers(this.user)
     .subscribe(
       (response) =>console.log(response),
       (error) =>console.log(error)
       );
+  }
+  onFetch(){
+    this.fire.getlist()
+    .subscribe(
+      (servers: User) =>this.user=servers,
+      (error)=> console.log(error)
+    );
   }
 
 

@@ -9,6 +9,8 @@ import {environment} from '../environments/environment';
 import {FireserveService} from './services/fireserve.service';
 import { UserService } from './services/user.service';
 import{HttpModule} from '@angular/http';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 
 
@@ -16,7 +18,9 @@ import{HttpModule} from '@angular/http';
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent
+    UserComponent,
+    SignInComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
