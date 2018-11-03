@@ -31,7 +31,7 @@ export class FireserveService {
       )
       .catch(
         (error: Response) => {
-          return Observable.throw('Retard alert');
+          return Observable.throw(console.log(Response));
         }
       );
       

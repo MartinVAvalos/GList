@@ -9,26 +9,24 @@
   </div>
     
   <div class="container-center">
- <form>
+ <form (ngSubmit)="onSignup(f)" #f="ngForm">
    <p class="form1">
-      <input type="text" name="email" placeholder="Email">
-      <label for="email"> </label>
-      <span>Enter your email</span> <br>
+      <input type="email" name="email" placeholder="email" ngModel>
+     
     </p>
-   
    <p class="form2">
-      <input type="password" placeholder="Password">
-      <label for="password"> </label>
-      <span>Enter your password</span>
+      <input type="password" name="password" placeholder="Password" ngModel>
+      
+     
     </p>
- </form>
-      <div class="sign">
+    <div class="sign">
     
-         <button id="red">Sign Up</button>
-        
-         
-         
-      </div>
+      <button id="red" type="submit">Sign Up</button>
+   </div>
+ </form>
+     
+
+
   </div>
 </div> <!-- this one is for container full -->
 

@@ -21,9 +21,12 @@
  </form>
       <div class="sign">
     
-         <button id="red">Sign In</button>
+         <button id="red" [routerLink]="['/user']">Sign In</button>
         
-         
+         <div class="noAccount">
+          <a [routerLink]="['/signUp']">Dont have an account</a>
+         </div>
+        
          
       </div>
   </div>

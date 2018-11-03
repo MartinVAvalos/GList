@@ -11,6 +11,7 @@ import { UserService } from './services/user.service';
 import{HttpModule} from '@angular/http';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 
@@ -26,7 +27,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [FireserveService],
   bootstrap: [AppComponent]

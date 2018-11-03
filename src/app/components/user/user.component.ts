@@ -14,14 +14,14 @@ import {Http} from '@angular/http'
 export class UserComponent implements OnInit {
 
 user:User;
-item:string='';
+item:string=''; //temp var
 //serv: any[];
 
  
   
   constructor( public u: UserService,private http: HttpClient,private fire:FireserveService ) { 
     this.user=u.user; // takes in the service and adds fields into it
-    
+    this.onFetch();
   
 
   }
