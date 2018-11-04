@@ -12,6 +12,7 @@ import{HttpModule} from '@angular/http';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { AuthService } from './services/auth/auth.service';
 
 
 
@@ -30,7 +31,7 @@ import { AppRoutingModule } from './/app-routing.module';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [FireserveService],
+  providers: [FireserveService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
