@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from './../../models/user.model';
 import {UserService} from './../../services/user.service';
-import {HttpClientModule, HttpClient} from '@angular/common/http';
 import {FireserveService} from './../../services/fireserve.service';
-import {Http} from '@angular/http'
+
 
 @Component({
   selector: 'app-user',
@@ -19,7 +18,7 @@ item:string=''; //temp var
 
  
   
-  constructor( public u: UserService,private http: HttpClient,private fire:FireserveService ) { 
+  constructor( public u: UserService,private fire:FireserveService ) { 
     this.user=u.user; // takes in the service and adds fields into it
     this.onFetch();
   

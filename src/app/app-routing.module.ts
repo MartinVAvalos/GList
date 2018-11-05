@@ -3,14 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { RouterModule, Routes } from '@angular/router';
 import { UserComponent } from './components/user/user.component';
-import { SignUpComponent } from './components/sign-up/sign-up.component';
-import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignupComponent } from './components/auth/signup/signup.component';
+import { SigninComponent } from './components/auth/signin/signin.component';
+import {BlankComponent} from './components/blank/blank.component';
 
 const routes: Routes = [
-  {path: '', component: SignInComponent },
-  {path: 'signIn', component: SignInComponent },
-  {path: 'signUp', component: SignUpComponent },
+  {path: '', component: SigninComponent },
+  {path: 'signin', component: SigninComponent },
+  {path: 'signup', component: SignupComponent },
   {path: 'user', component: UserComponent }
+
   
 ]
 

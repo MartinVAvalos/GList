@@ -9,10 +9,11 @@ import {environment} from '../environments/environment';
 import {FireserveService} from './services/fireserve.service';
 import { UserService } from './services/user.service';
 import{HttpModule} from '@angular/http';
-import { SignInComponent } from './components/sign-in/sign-in.component';
-import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { SigninComponent } from './components/auth/signin/signin.component';
+import { SignupComponent } from './components/auth/signup/signup.component';
 import { AppRoutingModule } from './/app-routing.module';
-import { AuthService } from './services/auth/auth.service';
+import { AuthService } from './components/auth/auth.service';
+import { BlankComponent } from './components/blank/blank.component';
 
 
 
@@ -21,8 +22,9 @@ import { AuthService } from './services/auth/auth.service';
   declarations: [
     AppComponent,
     UserComponent,
-    SignInComponent,
-    SignUpComponent
+    SigninComponent,
+    SignupComponent,
+    BlankComponent
   ],
   imports: [
     BrowserModule,
