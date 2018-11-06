@@ -10,7 +10,11 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent {
-  constructor(private authService: AuthService, private router: Router) {}
+
+  exist:string;
+  constructor(private authService: AuthService, private router: Router) {
+
+  }
 
   onSignup(form: NgForm) {
     const email = form.value.email;

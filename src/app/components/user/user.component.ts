@@ -20,7 +20,7 @@ item:string=''; //temp var
   
   constructor( public u: UserService,private fire:FireserveService ) { 
     this.user=u.user; // takes in the service and adds fields into it
-    this.onFetch();
+    //this.onFetch();
   
 
   }
