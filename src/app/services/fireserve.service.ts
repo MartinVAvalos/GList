@@ -16,12 +16,12 @@ export class FireserveService {
 
     storeServers(servers: User){
       
-      return this.http.put('https://list-86b44.firebaseio.com/'+this.uidFromUser.giveUID()+'.json', servers);
-   
+      
+ return this.http.put('https://list-86b44.firebaseio.com/'+this.uidFromUser.getUid()+'/data.json', servers);
     }
     getlist(){
 
-      return this.http.get('https://list-86b44.firebaseio.com/'+this.uidFromUser.giveUID()+'.json')
+      return this.http.get('https://list-86b44.firebaseio.com/'+this.uidFromUser.getUid()+'/data.json')
       .map(
           (response: Response) => {
             const data = response.json();

@@ -22,4 +22,5 @@ export class SignupComponent {
     this.authService.signupUser(email, password);
     this.router.navigate(['/signin']);
   }
+  
 }
