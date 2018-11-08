@@ -26,9 +26,14 @@ export class AuthService {
    //   console.log(this.value); this worked
   }
   getUid():string{
-    return this.value;
+    return this.value=firebase.auth().currentUser.uid;
   }
 
-  log_out(){ }
+  log_out(){
+    this.value=null;
+   }
+   set_uid(){
+     this.value=null;
+   }
   
 }
