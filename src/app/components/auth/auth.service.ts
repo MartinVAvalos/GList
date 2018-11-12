@@ -1,17 +1,15 @@
 import * as firebase from 'firebase';
 
-
-
 export class AuthService {
   value:string;
-  
+
 
   signupUser(email: string, password: string) {
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .catch(
         error => console.log(error)
       )
-      
+
   }
 
   signinUser(email: string, password: string) {
@@ -35,5 +33,5 @@ export class AuthService {
    set_uid(){
      this.value=null;
    }
-  
+
 }
